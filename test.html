@@ -1,0 +1,114 @@
+<p><a href="https://github.com/amercader/ckanext-testext/actions"><img src="https://github.com/amercader/ckanext-testext/workflows/Tests/badge.svg?branch=main" alt="Tests" /></a></p>
+
+<h1>ckanext-testext</h1>
+
+<p><strong>TODO:</strong> Put a description of your extension here:  What does it do? What features does it have? Consider including some screenshots or embedding a video!</p>
+
+<h2>Requirements</h2>
+
+<p><strong>TODO:</strong> For example, you might want to mention here which versions of CKAN this
+extension works with.</p>
+
+<p>If your extension works across different versions you can add the following table:</p>
+
+<p>Compatibility with core CKAN versions:</p>
+
+<p>| CKAN version    | Compatible?   |
+| --------------- | ------------- |
+| 2.6 and earlier | not tested    |
+| 2.7             | not tested    |
+| 2.8             | not tested    |
+| 2.9             | not tested    |</p>
+
+<p>Suggested values:
+   "yes"
+   "not tested" - I can't think of a reason why it wouldn't work
+   "not yet" - there is an intention to get it working
+   "no"</p>
+
+<h2>Installation</h2>
+
+<p><strong>TODO:</strong> Add any additional install steps to the list below.
+   For example installing any non-Python dependencies or adding any required
+   config settings.</p>
+
+<p>To install ckanext-testext:</p>
+
+<ol>
+<li><p>Activate your CKAN virtual environment, for example:</p>
+
+<p>. /usr/lib/ckan/default/bin/activate</p></li>
+<li><p>Clone the source and install it on the virtualenv</p>
+
+<p>git clone https://github.com/amercader/ckanext-testext.git
+cd ckanext-testext
+pip install -e .
+pip install -r requirements.txt</p></li>
+<li><p>Add <code>testext</code> to the <code>ckan.plugins</code> setting in your CKAN
+config file (by default the config file is located at
+<code>/etc/ckan/default/ckan.ini</code>).</p></li>
+<li><p>Restart CKAN. For example if you've deployed CKAN with Apache on Ubuntu:</p>
+
+<p>sudo service apache2 reload</p></li>
+</ol>
+
+<h2>Config settings</h2>
+
+<p>None at present</p>
+
+<p><strong>TODO:</strong> Document any optional config settings here. For example:</p>
+
+<p>.. # The minimum number of hours to wait before re-checking a resource
+   # (optional, default: 24).
+   ckanext.testext.some<em>setting = some</em>default_value</p>
+
+<h2>Developer installation</h2>
+
+<p>To install ckanext-testext for development, activate your CKAN virtualenv and
+do:</p>
+
+<pre><code>git clone https://github.com/amercader/ckanext-testext.git
+cd ckanext-testext
+python setup.py develop
+pip install -r dev-requirements.txt
+</code></pre>
+
+<h2>Tests</h2>
+
+<p>To run the tests, do:</p>
+
+<pre><code>pytest --ckan-ini=test.ini
+</code></pre>
+
+<h2>Releasing a new version of ckanext-testext</h2>
+
+<p>If ckanext-testext should be available on PyPI you can follow these steps to publish a new version:</p>
+
+<ol>
+<li><p>Update the version number in the <code>setup.py</code> file. See <a href="http://legacy.python.org/dev/peps/pep-0440/#public-version-identifiers">PEP 440</a> for how to choose version numbers.</p></li>
+<li><p>Make sure you have the latest version of necessary packages:</p>
+
+<p>pip install --upgrade setuptools wheel twine</p></li>
+<li><p>Create a source and binary distributions of the new version:</p>
+
+<p>python setup.py sdist bdist_wheel &amp;&amp; twine check dist/*</p>
+
+<p>Fix any errors you get.</p></li>
+<li><p>Upload the source distribution to PyPI:</p>
+
+<p>twine upload dist/*</p></li>
+<li><p>Commit any outstanding changes:</p>
+
+<p>git commit -a
+   git push</p></li>
+<li><p>Tag the new release of the project on GitHub with the version number from
+the <code>setup.py</code> file. For example if the version number in <code>setup.py</code> is
+0.0.1 then do:</p>
+
+<p>git tag 0.0.1
+   git push --tags</p></li>
+</ol>
+
+<h2>License</h2>
+
+<p><a href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPL</a></p>
