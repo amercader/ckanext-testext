@@ -43,7 +43,6 @@ jobs:
         sed -i -e 's/use = config:.*/use = config:\/srv\/app\/src\/ckan\/test-core.ini/' test.ini
 
         ckan -c test.ini db init
-        ckan -c test.ini harvester initdb
     - name: Run tests
       run: pytest --ckan-ini=test.ini --cov=ckanext.testext --disable-warnings ckanext/testext
 
